@@ -1,5 +1,7 @@
 package tech.angelofdiasg.auxs;
 
+import java.util.Scanner;
+
 public class Endereco {
     private String rua;
     private String numero;
@@ -15,6 +17,23 @@ public class Endereco {
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
+    }
+
+    public Endereco() {
+    }
+
+    public void cadastrarEndereco(Scanner sc) {
+        System.out.print("Logradouro: ");
+        this.rua = sc.nextLine();
+
+        System.out.print("Número: ");
+        this.numero = sc.nextLine();
+
+        System.out.print("Cidade: ");
+        this.cidade = sc.nextLine();
+
+        System.out.print("CEP: ");
+        this.cep = sc.nextLine();
     }
 
     public String getRua() {

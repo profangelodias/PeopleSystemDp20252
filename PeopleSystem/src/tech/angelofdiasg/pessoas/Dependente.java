@@ -1,6 +1,8 @@
 package tech.angelofdiasg.pessoas;
 
-public class Dependente {
+import tech.angelofdiasg.interfaces.PessoasCadastraveis;
+
+public class Dependente extends Pessoa implements PessoasCadastraveis {
     private Cliente titular;
 
     public Cliente getTitular() {
@@ -9,5 +11,10 @@ public class Dependente {
 
     public void setTitular(Cliente titular) {
         this.titular = titular;
+    }
+
+    @Override
+    public void cadastrar() {
+        
     }
 }

@@ -5,12 +5,8 @@ import tech.angelofdiasg.auxs.Endereco;
 public class Pessoa {
     private String nome;
     private String dataNascimento;
-    private Endereco endereco;
+    protected Endereco endereco;
     private String telsContato;
-
-    public void cadastrar(){
-//        log cadastro do pessoad não é possíbevel
-    }
 
     public int obterIdade(){
         return 1;

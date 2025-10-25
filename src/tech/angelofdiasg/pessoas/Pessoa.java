@@ -1,12 +1,15 @@
 package tech.angelofdiasg.pessoas;
 
 import tech.angelofdiasg.auxs.Endereco;
+import tech.angelofdiasg.auxs.Telefone;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Pessoa {
     private String nome;
     private String dataNascimento;
     protected Endereco endereco;
-    private String telsContato;
+    private List<Telefone> telefones = new ArrayList<>();
 
     public int obterIdade(){
         return 1;
@@ -37,11 +40,17 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public String getTelsContato() {
-        return telsContato;
+    public List<Telefone> getTelefones() {
+        return telefones;
     }
 
-    public void setTelsContato(String telsContato) {
-        this.telsContato = telsContato;
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
+
+    public void addTelefone(Telefone telefone) {
+        if (telefone != null && telefone.validar()) {
+            this.telefones.add(telefone);
+        }
     }
 }

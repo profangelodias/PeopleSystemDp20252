@@ -11,7 +11,7 @@ public class MainApp {
         Cliente cliente1 = new Cliente();
         Endereco end1 = new Endereco("Rua 1","1","111100","Um","Estado Um","OUm");
         cliente1.setEndereco(end1);
-
+        cliente1.cadastrar();;
         System.out.println("Funcionando!");
 
     }
